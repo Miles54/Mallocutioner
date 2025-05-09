@@ -1,0 +1,30 @@
+Custom License.
+
+Copyright (c) 2025 Ethan Miles Hardt
+
+Permission is granted, free of charge, to use, modify, study, reverse engineer,
+and redistribute the source code under the following terms: 
+
+	1: Source code redistributions must carry the same license.
+	2: Source code redistributions must not be separated from any copyright notice.
+	3: Source code redistributions must not falsly imply or state endorsement.
+	4: Source code must not be used for training AI
+
+Permission is granted to compile the source code and/or release the resulting binary program under the following terms:
+
+	1: Binary distributions must either be packaged with copyright information, 
+		or must have functionality to produce such information on request.
+	2: Binary distributions must not falsly imply or state endorsement.
+	3: Binaries must not be used for training AI
+
+If any term or section is unenforcable, the effective license is all enforcable terms and sections,
+except if the disclaimer is unenforcable, then no license is granted.
+
+Disclaimer:
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
