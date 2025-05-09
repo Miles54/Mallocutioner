@@ -14,6 +14,7 @@ int main(int argc, char* argv[]) {
 	bool DontFill = false;
 	bool Copyright = false;
 	bool License = false;
+	bool Hold = false;
 	std::string Path = argv[0];
 	for (int argi = 1; argi < argc; argi++) {
 		std::string arg = argv[argi];
@@ -30,7 +31,11 @@ int main(int argc, char* argv[]) {
 			Copyright = true;
 		}
 		if (arg == "License") {
-			Copyright = true;
+			License = true;
+		}
+		if (arg == "Hold") {
+			DontFree = true;
+			Hold = true;
 		}
 	}
 	if (Copyright) {
@@ -104,7 +109,7 @@ int main(int argc, char* argv[]) {
 	} else {
 		std::cout << "Excellent, Let's begin." << std::endl << std::flush;
 	}
-	void* Baloon = malloc(65536); // For ending operations.
+	void* Balloon = malloc(262144); // For ending operations.
 
 
 
@@ -150,6 +155,8 @@ int main(int argc, char* argv[]) {
 		free(Carry);
 	}
 	//*///
+	free(Balloon); // Pop the Balloon to gain some working memory again.
+
 	if (!DontFree) {
 		for (uint64_t freeIndex = 0; freeIndex < PointerCount; freeIndex++) {
 			void* Ptr = Pointers[freeIndex];
@@ -158,7 +165,6 @@ int main(int argc, char* argv[]) {
 			}
 		}
 	}
-	free(Baloon); // Pop the Baloon.
 	std::cout << "Bytes Mallocuted: " << std::to_string(Allocate) << std::endl << std::flush;
 	std::cout << "Mallocutions: " << std::to_string(Allocations) << std::endl << std::flush;
 	if (Full) {
@@ -171,5 +177,12 @@ int main(int argc, char* argv[]) {
 		std::cout << "Perhaps you are testing your system's memory management." << std::endl << std::flush;
 	}
 	std::this_thread::sleep_for(std::chrono::seconds(1));
+	if (Hold) {
+		std::cout << "Press Ctrl-C to end this program." << std::endl << std::flush;
+		while (true) {
+			std::this_thread::sleep_for(std::chrono::milliseconds(5));
+		}
+	}
+
 	return 0;
 }
